@@ -4,8 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chaqx — Digital Architect</title>
+  <meta name="description" content="Full-stack developer & UI/UX architect crafting premium digital experiences that convert visitors into loyal clients. Based in Algeria."/>
+  <meta name="keywords" content="web development, UI/UX design, Algeria, e-commerce, SaaS, digital products, Chaqx"/>
+  <meta name="author" content="Chaqx"/>
+  <meta name="robots" content="index, follow"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Chaqx — Digital Architect"/>
+  <meta property="og:description" content="Full-stack developer & UI/UX architect crafting premium digital experiences that convert visitors into loyal clients."/>
+  <meta property="og:image" content="/pic.jpg"/>
+  <meta property="og:url" content="https://chaqx.com"/>
+  <meta property="og:site_name" content="Chaqx"/>
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Chaqx — Digital Architect"/>
+  <meta name="twitter:description" content="Full-stack developer & UI/UX architect crafting premium digital experiences."/>
+  <meta name="twitter:image" content="/pic.jpg"/>
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#00e5ff" media="(prefers-color-scheme: dark)"/>
+  <meta name="theme-color" content="#0090c8" media="(prefers-color-scheme: light)"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
   <!-- Apply cached colors instantly to prevent flash -->
   <script>
     (function(){
@@ -1313,6 +1332,362 @@
       box-shadow:0 8px 30px rgba(0,229,255,.3),0 0 0 1px rgba(0,229,255,.2);
     }
     .social-icon-btn:hover::before { opacity:1; }
+
+    /* ════════════════════════════════════════════
+       DESIGN SYSTEM UPGRADE v2 — Visual Framework
+       All functionality preserved, visuals enhanced
+    ════════════════════════════════════════════ */
+
+    /* Better body typography */
+    p, .section-desc, .service-card p, .testimonial-text,
+    .booking-feature p, .footer-tagline, .contact-link-sub,
+    .tariff-sub, .tariff-features li, .addon-name, .page-sub {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Refined section tags — pill style */
+    .section-tag {
+      padding: .45rem 1.1rem;
+      background: rgba(0,229,255,.05);
+      border: 1px solid rgba(0,229,255,.18);
+      border-radius: 50px;
+      backdrop-filter: blur(8px);
+      font-size: .7rem;
+      letter-spacing: .16em;
+    }
+    .section-tag::before, .section-tag::after { display: none; }
+
+    /* Enhanced nav */
+    nav {
+      background: rgba(1,9,17,.88);
+      border-bottom: 1px solid rgba(0,229,255,.07);
+      box-shadow: 0 1px 60px rgba(0,0,0,.5);
+    }
+    [data-theme="light"] nav {
+      background: rgba(232,248,255,.92);
+    }
+    nav.scrolled {
+      box-shadow: 0 4px 50px rgba(0,229,255,.1), 0 1px 60px rgba(0,0,0,.5);
+    }
+
+    /* Nav CTA pill refinement */
+    .nav-cta {
+      border-radius: 10px;
+      padding: .5rem 1.2rem;
+      font-size: .78rem;
+      letter-spacing: .06em;
+    }
+
+    /* Better hero glow */
+    .hero-glow {
+      background: radial-gradient(ellipse 60% 55% at 50% 60%,
+        rgba(0,229,255,.13) 0%, transparent 70%);
+    }
+
+    /* Profile ring upgrade */
+    .profile-pic-wrap::before {
+      background: conic-gradient(
+        var(--primary) 0deg, var(--accent) 90deg,
+        rgba(255,255,255,.8) 130deg, var(--accent2) 200deg,
+        var(--primary) 270deg, var(--accent) 330deg, var(--primary) 360deg
+      );
+    }
+
+    /* Service cards — glass upgrade */
+    .service-card {
+      border-radius: 22px;
+      background: linear-gradient(145deg,
+        rgba(3,20,35,.96) 0%,
+        rgba(5,24,40,.88) 100%);
+      border: 1px solid rgba(0,229,255,.09);
+      box-shadow: 0 4px 30px rgba(0,0,0,.3),
+                  inset 0 1px 0 rgba(0,229,255,.06);
+    }
+    .service-card:hover {
+      border-color: rgba(0,229,255,.45);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5),
+                  0 0 40px rgba(0,229,255,.1),
+                  inset 0 1px 0 rgba(0,229,255,.12);
+      transform: translateY(-10px);
+    }
+    .service-icon {
+      background: linear-gradient(135deg,
+        rgba(0,229,255,.16) 0%,
+        rgba(128,244,255,.08) 100%);
+      border: 1px solid rgba(0,229,255,.18);
+      box-shadow: 0 8px 24px rgba(0,0,0,.3),
+                  inset 0 1px 0 rgba(0,229,255,.1);
+      border-radius: 16px;
+    }
+
+    /* Project cards upgrade */
+    .project-card {
+      border-radius: 22px;
+      border: 1px solid rgba(0,229,255,.09);
+      box-shadow: 0 4px 24px rgba(0,0,0,.35);
+      background: linear-gradient(145deg,
+        rgba(3,17,29,.97) 0%,
+        rgba(5,24,40,.9) 100%);
+    }
+    .project-card:hover {
+      border-color: rgba(0,229,255,.45);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5),
+                  0 0 30px rgba(0,144,200,.15);
+    }
+
+    /* Better filter pills */
+    .filter-btn {
+      border-radius: 10px;
+      border: 1px solid rgba(0,229,255,.12);
+      font-size: .72rem;
+    }
+    .filter-btn.active {
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,229,255,.3);
+    }
+
+    /* Tariff cards upgrade */
+    .tariff-card {
+      border-radius: 24px;
+      background: linear-gradient(145deg,
+        rgba(3,17,29,.97) 0%,
+        rgba(5,24,40,.9) 100%);
+      border: 1px solid rgba(0,229,255,.08);
+      box-shadow: 0 4px 30px rgba(0,0,0,.3);
+    }
+    .tariff-card:hover {
+      border-color: rgba(0,229,255,.35);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5),
+                  0 0 40px rgba(0,229,255,.08);
+    }
+    .tariff-featured {
+      background: linear-gradient(145deg,
+        rgba(0,229,255,.07) 0%,
+        rgba(3,17,29,.97) 50%);
+      border: 1px solid rgba(0,229,255,.3);
+      box-shadow: 0 0 60px rgba(0,229,255,.12),
+                  0 20px 60px rgba(0,0,0,.4);
+    }
+    .tariff-featured:hover {
+      box-shadow: 0 0 80px rgba(0,229,255,.2),
+                  0 24px 80px rgba(0,0,0,.5);
+    }
+    .tariff-btn {
+      border-radius: 12px;
+      letter-spacing: .05em;
+    }
+    .tariff-popular {
+      border-radius: 8px;
+      padding: .3rem .9rem;
+      letter-spacing: .08em;
+    }
+
+    /* Add-ons box */
+    .tariff-addons {
+      border-radius: 22px;
+      background: linear-gradient(145deg,
+        rgba(3,17,29,.97) 0%,
+        rgba(5,24,40,.9) 100%);
+      border: 1px solid rgba(0,229,255,.08);
+    }
+    .addon-item {
+      border-radius: 12px;
+    }
+
+    /* Testimonial cards */
+    .testimonial-card {
+      border-radius: 22px;
+      background: linear-gradient(145deg,
+        rgba(3,20,35,.97) 0%,
+        rgba(5,24,40,.9) 100%);
+      border: 1px solid rgba(0,229,255,.08);
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    }
+    .testimonial-card:hover {
+      border-color: rgba(0,229,255,.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,.4), 0 0 20px rgba(0,229,255,.08);
+    }
+    .author-avatar {
+      border-radius: 14px;
+    }
+
+    /* Contact form + cards */
+    .contact-form {
+      border-radius: 24px;
+      background: linear-gradient(145deg,
+        rgba(3,17,29,.97) 0%,
+        rgba(5,24,40,.9) 100%);
+      border: 1px solid rgba(0,229,255,.1);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4),
+                  inset 0 1px 0 rgba(0,229,255,.08);
+    }
+    .contact-link {
+      border-radius: 14px;
+      background: linear-gradient(145deg,
+        rgba(3,17,29,.96), rgba(5,24,40,.88));
+      border: 1px solid rgba(0,229,255,.09);
+    }
+    .contact-link:hover {
+      border-color: rgba(0,229,255,.35);
+      box-shadow: 0 8px 30px rgba(0,0,0,.3),
+                  0 0 20px rgba(0,144,200,.1);
+    }
+    .contact-link-icon {
+      border-radius: 12px;
+    }
+
+    /* Booking form */
+    .booking-form {
+      background: linear-gradient(145deg,
+        rgba(3,17,29,.97) 0%,
+        rgba(5,24,40,.9) 100%);
+      border-radius: 24px;
+      border: 1px solid rgba(0,229,255,.1);
+      padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,.4),
+                  inset 0 1px 0 rgba(0,229,255,.08);
+    }
+    .form-group input, .form-group textarea {
+      border-radius: 12px;
+      background: rgba(2,12,22,.8);
+      border: 1px solid rgba(0,229,255,.12);
+      transition: border-color .3s, box-shadow .3s, background .3s;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      background: rgba(2,12,22,.95);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0,229,255,.12);
+    }
+    .form-group label {
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem;
+      letter-spacing: .08em;
+    }
+
+    /* Buttons upgrade */
+    .btn-primary {
+      border-radius: 12px;
+      letter-spacing: .05em;
+      box-shadow: 0 4px 24px rgba(0,229,255,.25);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 8px 40px rgba(0,229,255,.45);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border-radius: 12px;
+      border: 1.5px solid rgba(0,229,255,.3);
+    }
+    .btn-outline:hover {
+      border-color: rgba(0,144,200,.7);
+      box-shadow: 0 8px 30px rgba(0,144,200,.2);
+    }
+
+    /* Footer upgrade */
+    #site-footer {
+      background: linear-gradient(180deg, var(--bg2) 0%, #010810 100%);
+    }
+    .footer-social-btn {
+      border-radius: 12px;
+    }
+
+    /* Project modal upgrade */
+    #projectModal .modal-box {
+      border-radius: 24px;
+      border: 1px solid rgba(0,229,255,.12);
+      box-shadow: 0 40px 100px rgba(0,0,0,.7),
+                  0 0 80px rgba(0,229,255,.06);
+    }
+
+    /* Slider controls */
+    .slider-btn {
+      border-radius: 12px;
+      width: 44px; height: 44px;
+    }
+
+    /* Hero badge pulse dot */
+    .badge-dot {
+      box-shadow: 0 0 10px var(--primary), 0 0 20px rgba(0,229,255,.4);
+    }
+
+    /* Tariff notice */
+    .tariffs-notice {
+      border-radius: 16px;
+    }
+
+    /* Scroll bar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: rgba(2,12,20,.5); }
+    ::-webkit-scrollbar-thumb { 
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      border-radius: 10px;
+    }
+
+    /* Social icon btns */
+    .social-icon-btn {
+      border-radius: 16px;
+      transition: all .35s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* booking features */
+    .booking-feature {
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid rgba(0,229,255,.06);
+      background: rgba(0,229,255,.02);
+      transition: border-color .3s;
+    }
+    .booking-feature:hover {
+      border-color: rgba(0,229,255,.2);
+      background: rgba(0,229,255,.04);
+    }
+
+    /* Mobile menu upgrade */
+    .mobile-menu {
+      border-right: 1px solid rgba(0,229,255,.1);
+      background: linear-gradient(180deg, #010810, #020c14);
+      box-shadow: 4px 0 40px rgba(0,0,0,.6);
+    }
+    .mobile-cta {
+      border-radius: 12px;
+    }
+
+    /* Light theme tweaks */
+    [data-theme="light"] .service-card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(0,144,200,.12);
+      box-shadow: 0 4px 30px rgba(0,144,200,.08);
+    }
+    [data-theme="light"] .project-card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(0,144,200,.12);
+    }
+    [data-theme="light"] .tariff-card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(0,144,200,.12);
+    }
+    [data-theme="light"] .testimonial-card {
+      background: rgba(255,255,255,.92);
+    }
+    [data-theme="light"] .contact-form {
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(0,144,200,.15);
+    }
+    [data-theme="light"] .contact-link {
+      background: rgba(255,255,255,.92);
+    }
+    [data-theme="light"] .tariff-addons {
+      background: rgba(255,255,255,.92);
+    }
+
+    /* Spinner upgrade */
+    .spinner {
+      border-radius: 50%;
+      border: 3px solid rgba(0,229,255,.15);
+      border-top-color: var(--primary);
+      box-shadow: 0 0 20px rgba(0,229,255,.2);
+    }
+
   </style>
 </head>
 <body>
@@ -1321,10 +1696,10 @@
 <nav id="navbar">
   <div class="nav-logo" onclick="smoothTo('hero')">Chaqx</div>
   <div class="nav-links">
-    <a onclick="smoothTo('services')" data-i18n="navServices">Services</a>
-    <a onclick="smoothTo('projects')" data-i18n="navProjects">Projects</a>
-    <a onclick="smoothTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
-    <a onclick="smoothTo('booking')" data-i18n="navBook">Book a Call</a>
+    <a href="javascript:void(0)" onclick="smoothTo('services')" data-i18n="navServices">Services</a>
+    <a href="javascript:void(0)" onclick="smoothTo('projects')" data-i18n="navProjects">Projects</a>
+    <a href="javascript:void(0)" onclick="smoothTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
+    <a href="javascript:void(0)" onclick="smoothTo('booking')" data-i18n="navBook">Book a Call</a>
   </div>
   <div class="nav-right">
 
@@ -1360,10 +1735,10 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
-  <a onclick="mobileTo('services')" data-i18n="navServices">Services</a>
-  <a onclick="mobileTo('projects')" data-i18n="navProjects">Projects</a>
-  <a onclick="mobileTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
-  <a onclick="mobileTo('booking')" data-i18n="navBook">Book a Call</a>
+  <a href="javascript:void(0)" onclick="mobileTo('services')" data-i18n="navServices">Services</a>
+  <a href="javascript:void(0)" onclick="mobileTo('projects')" data-i18n="navProjects">Projects</a>
+  <a href="javascript:void(0)" onclick="mobileTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
+  <a href="javascript:void(0)" onclick="mobileTo('booking')" data-i18n="navBook">Book a Call</a>
   <span class="mobile-cta" onclick="mobileTo('booking')" data-i18n="navCta">Let's Talk</span>
   <div class="mobile-menu-lang">
     <button class="lang-btn active" onclick="pickLang('en')">🇬🇧 EN</button>
@@ -1380,7 +1755,7 @@
   <div class="hero-content">
     <div class="hero-left">
       <div class="profile-pic-wrap">
-        <img src="pic.jpg" alt="Chaqx" class="profile-pic" onerror="this.outerHTML='<div class=\'profile-pic-placeholder\'>👤</div>'">
+        <img src="/pic.jpg" alt="Chaqx" class="profile-pic" width="152" height="152" onerror="this.outerHTML='<div class=\'profile-pic-placeholder\'>👤</div>'">
         <!-- Inner orbit ring -->
         <div class="orbit-ring orbit-ring-1">
           <div class="orbit-badge ob-1">⚡</div>
@@ -1402,7 +1777,26 @@
     <h1 class="hero-title">
       <span data-i18n="heroT1">Building</span><br><span class="shiny" data-i18n="heroT2">Digital Futures</span><br><span data-i18n="heroT3">that </span><span class="shiny-gold" data-i18n="heroT4">Matter</span>
     </h1>
-    <p class="hero-sub" data-i18n="heroSub">Full-stack developer &amp; UI/UX architect crafting premium digital experiences that convert visitors into loyal clients.</p>
+    <p class="hero-sub" data-i18n="heroSub">Full-stack developer &amp; UI/UX architect crafting premium digital experiences.</p>
+    <script>
+      (function(){
+        try {
+          var _s = JSON.parse(localStorage.getItem('siteColors') || 'null');
+          if (!_s) return;
+          if (_s.heroSub) {
+            var _sub = document.querySelector('.hero-sub');
+            if (_sub) _sub.textContent = _s.heroSub;
+          }
+          if (_s.heroTitle1 || _s.heroTitle2) {
+            var _t = document.querySelector('.hero-title');
+            if (_t) _t.innerHTML =
+              (_s.heroTitle1 || 'Building') +
+              '<br><span class="shiny">' + (_s.heroTitle2 || 'Digital Futures') + '</span>' +
+              '<br>that <span class="shiny-gold">Matter</span>';
+          }
+        } catch(e) {}
+      })();
+    </script>
     <div class="hero-btns">
       <button class="btn-primary" onclick="smoothTo('projects')" data-i18n="btnProjects">View Projects ↓</button>
       <button class="btn-outline" onclick="smoothTo('booking')" data-i18n="btnBook">Book a Call ↗</button>
@@ -1532,6 +1926,37 @@
     <span class="tariffs-notice-icon">💡</span>
     <p data-i18n="tariffsNote">All prices shown are <strong>starting prices</strong>. Final cost depends on project scope &amp; requirements. Contact me for a custom quote.</p>
   </div>
+
+  <!-- Add-ons & Extras -->
+  <div class="tariff-addons reveal">
+    <h3 class="addons-title" data-i18n="addonsTitle">⚡ Add-ons &amp; Extras</h3>
+    <div class="addons-grid">
+      <div class="addon-item">
+        <span class="addon-name" data-i18n="a1n">Monthly Maintenance</span>
+        <span class="addon-price">3 000 DA/<span data-i18n="perMonth">month</span></span>
+      </div>
+      <div class="addon-item">
+        <span class="addon-name" data-i18n="a2n">Logo &amp; Branding</span>
+        <span class="addon-price">5 000 DA</span>
+      </div>
+      <div class="addon-item">
+        <span class="addon-name" data-i18n="a3n">SEO Optimization</span>
+        <span class="addon-price">4 000 DA</span>
+      </div>
+      <div class="addon-item">
+        <span class="addon-name" data-i18n="a4n">Performance Audit</span>
+        <span class="addon-price">2 500 DA</span>
+      </div>
+      <div class="addon-item">
+        <span class="addon-name" data-i18n="a5n">Extra Page</span>
+        <span class="addon-price">1 500 DA/<span data-i18n="perPage">page</span></span>
+      </div>
+      <div class="addon-item">
+        <span class="addon-name" data-i18n="a6n">Rush Delivery (-50% time)</span>
+        <span class="addon-price">+30%</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS (dynamic — hidden until reviews exist) -->
@@ -1571,20 +1996,74 @@
           <div class="form-group"><label data-i18n="fName">Full Name</label><input type="text" id="bookName" data-i18n-ph="phName" placeholder="John Doe"/></div>
           <div class="form-group"><label data-i18n="fEmail">Email Address</label><input type="email" id="bookEmail" data-i18n-ph="phEmail" placeholder="john@email.com"/></div>
         </div>
-        <div class="form-group">
-            <label data-i18n="fPhone">Phone Number</label>
-            <input type="tel" id="bookPhone" data-i18n-ph="phPhone" placeholder="07XXXXXXXX" maxlength="10"
-              style="width:100%;padding:.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:'Syne',sans-serif;font-size:.88rem;outline:none;transition:border-color .3s,box-shadow .3s;"
-              oninput="validatePhone(this)" onfocus="this.style.borderColor='var(--primary)';this.style.boxShadow='0 0 0 3px rgba(0,229,255,.15)'" onblur="validatePhoneBlur(this)"/>
-            <div id="bookPhoneError" style="display:none;color:#ff4757;font-size:.75rem;margin-top:.35rem;" data-i18n="phoneError">Please enter a valid Algerian number</div>
+        <div class="form-row">
+          <div class="form-group">
+              <label data-i18n="fPhone">Phone Number</label>
+              <input type="tel" id="bookPhone" data-i18n-ph="phPhone" placeholder="07XXXXXXXX" maxlength="10"
+                style="width:100%;padding:.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:'Syne',sans-serif;font-size:.88rem;outline:none;transition:border-color .3s,box-shadow .3s;"
+                oninput="validatePhone(this,'bookPhoneError')" onfocus="this.style.borderColor='var(--primary)';this.style.boxShadow='0 0 0 3px rgba(0,229,255,.15)'" onblur="validatePhoneBlur(this,'bookPhoneError')"/>
+              <div id="bookPhoneError" style="display:none;color:#ff4757;font-size:.75rem;margin-top:.35rem;" data-i18n="phoneError">Please enter a valid Algerian number</div>
           </div>
+          <div class="form-group"><label data-i18n="fDate">Preferred Date</label><input type="date" id="bookDate" style="width:100%;padding:.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:'Syne',sans-serif;font-size:.88rem;outline:none;transition:border-color .3s,box-shadow .3s;color-scheme:dark;" onfocus="this.style.borderColor='var(--primary)';this.style.boxShadow='0 0 0 3px rgba(0,229,255,.15)'" onblur="this.style.borderColor='';this.style.boxShadow=''"/></div>
+        </div>
         <div class="form-group"><label data-i18n="fSubject">Subject</label><input type="text" id="bookSubject" data-i18n-ph="phSubject" placeholder="Project inquiry / Collaboration / Other"/></div>
         <div class="form-group"><label data-i18n="fProject">Tell me about your project</label><textarea id="bookMessage" data-i18n-ph="phProject" placeholder="Describe your idea, goals, and challenges..."></textarea></div>
         <input type="text" id="hpTrap" name="website" autocomplete="off" tabindex="-1"
           style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true"/>
-        <button class="btn-primary" style="width:100%;padding:1.05rem;border-radius:12px;" onclick="submitBooking()" data-i18n="btnSubmitBook">Book My Call →</button>
+        <button class="btn-primary" style="width:100%;padding:1.05rem;border-radius:12px;" onclick="submitBooking(this)" data-i18n="btnSubmitBook">Book My Call →</button>
       </div>
       <div class="form-success" id="bookingSuccess"><div class="check">✓</div><h3 data-i18n="bookSuccessTitle">You're booked!</h3><p data-i18n="bookSuccessDesc">I'll reach out within 2 hours to confirm your slot.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-tag" data-i18n="contactTag">Get In Touch</div>
+  <h2 class="section-title reveal" data-i18n="contactTitle">Start a Project</h2>
+  <p class="section-desc reveal" data-i18n="contactInfoDesc">Whether you have a clear vision or just an idea — I'm here to help you bring it to life.</p>
+  <div class="contact-container">
+    <div class="contact-info reveal">
+      <h3 data-i18n="contactInfoTitle">Let's build something great together</h3>
+      <p data-i18n="contactInfoDesc">Whether you have a clear vision or just an idea — I'm here to help you bring it to life.</p>
+      <div class="contact-links" id="contactInfoLinks" style="display:flex;flex-direction:column;gap:.9rem;margin-top:1.5rem;">
+        <div class="contact-link-loading" data-i18n="loadingContact">Loading contact info...</div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div id="contactFormWrap">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="fName">Full Name</label>
+            <input type="text" id="cName" data-i18n-ph="phName" placeholder="John Doe"/>
+          </div>
+          <div class="form-group">
+            <label data-i18n="fEmail">Email Address</label>
+            <input type="email" id="cEmail" data-i18n-ph="phEmail" placeholder="john@email.com"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="fPhone">Phone Number</label>
+          <input type="tel" id="cPhone" data-i18n-ph="phPhone" placeholder="07XXXXXXXX" maxlength="10"
+            style="width:100%;padding:.85rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:'Syne',sans-serif;font-size:.88rem;outline:none;transition:border-color .3s,box-shadow .3s;"
+            oninput="validatePhone(this,'phoneError')" onfocus="this.style.borderColor='var(--primary)';this.style.boxShadow='0 0 0 3px rgba(0,229,255,.15)'" onblur="validatePhoneBlur(this,'phoneError')"/>
+          <div id="phoneError" style="display:none;color:#ff4757;font-size:.75rem;margin-top:.35rem;" data-i18n="phoneError">Please enter a valid Algerian number</div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="fSubject">Subject</label>
+          <input type="text" id="cSubject" data-i18n-ph="phSubject" placeholder="Project inquiry / Collaboration / Other"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="fMessage">Message</label>
+          <textarea id="cMessage" data-i18n-ph="phMessage" placeholder="Tell me everything..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;padding:1.05rem;border-radius:12px;" onclick="submitContact(this)" data-i18n="btnSend">Send Message →</button>
+      </div>
+      <div class="form-success" id="contactSuccess">
+        <div class="check">✓</div>
+        <h3 data-i18n="contactSuccessTitle">Message received!</h3>
+        <p data-i18n="contactSuccessDesc">I'll get back to you within 24 hours.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1602,10 +2081,10 @@
     <!-- Nav column -->
     <div class="footer-col">
       <div class="footer-col-title" data-i18n="footerNav">Navigate</div>
-      <a class="footer-nav-link" onclick="smoothTo('services')" data-i18n="navServices">Services</a>
-      <a class="footer-nav-link" onclick="smoothTo('projects')" data-i18n="navProjects">Projects</a>
-      <a class="footer-nav-link" onclick="smoothTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
-      <a class="footer-nav-link" onclick="smoothTo('booking')" data-i18n="navBook">Book a Call</a>
+      <a class="footer-nav-link" href="javascript:void(0)" onclick="smoothTo('services')" data-i18n="navServices">Services</a>
+      <a class="footer-nav-link" href="javascript:void(0)" onclick="smoothTo('projects')" data-i18n="navProjects">Projects</a>
+      <a class="footer-nav-link" href="javascript:void(0)" onclick="smoothTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
+      <a class="footer-nav-link" href="javascript:void(0)" onclick="smoothTo('booking')" data-i18n="navBook">Book a Call</a>
     </div>
 
     <!-- Services column -->
@@ -1630,10 +2109,10 @@
   <div class="footer-bottom">
     <span class="footer-text" id="footerCopyright" data-i18n="footerCopy">Designed & developed with passion — Chaqx © 2026. All rights reserved.</span>
     <div class="footer-bottom-links">
-      <a onclick="smoothTo('services')" data-i18n="navServices">Services</a>
-      <a onclick="smoothTo('projects')" data-i18n="navProjects">Projects</a>
-      <a onclick="smoothTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
-      <a onclick="smoothTo('booking')" data-i18n="navBook">Book a Call</a>
+      <a href="javascript:void(0)" onclick="smoothTo('services')" data-i18n="navServices">Services</a>
+      <a href="javascript:void(0)" onclick="smoothTo('projects')" data-i18n="navProjects">Projects</a>
+      <a href="javascript:void(0)" onclick="smoothTo('tariffs')" data-i18n="navTariffs">Tariffs</a>
+      <a href="javascript:void(0)" onclick="smoothTo('booking')" data-i18n="navBook">Book a Call</a>
     </div>
   </div>
 </footer>
@@ -1801,14 +2280,31 @@
   }
   loadProjects();
   window._firestoreDb = db;
-  // Now that Firestore is ready, trigger social links load
+  // Now that Firestore is ready, trigger social links load AND reviews
   if (typeof window.loadSocialLinks === 'function') window.loadSocialLinks();
+  if (typeof window.loadReviews === 'function') window.loadReviews();
 
-  window.submitBooking = async function() {
+  /* ── RATE LIMITING ── */
+  const SUBMIT_COOLDOWN_MS = 60000; // 1 minute between submissions
+  function checkRateLimit(key) {
+    const last = parseInt(localStorage.getItem(key) || '0');
+    const now = Date.now();
+    if (now - last < SUBMIT_COOLDOWN_MS) {
+      const secs = Math.ceil((SUBMIT_COOLDOWN_MS - (now - last)) / 1000);
+      alert(`Please wait ${secs} seconds before submitting again.`);
+      return false;
+    }
+    localStorage.setItem(key, now);
+    return true;
+  }
+
+  window.submitBooking = async function(btn) {
     if (!checkHoneypot()) return;
+    if (!checkRateLimit('lastBooking')) return;
     const name=document.getElementById('bookName').value.trim(),
           email=document.getElementById('bookEmail').value.trim(),
           phone=document.getElementById('bookPhone').value.trim(),
+          date=document.getElementById('bookDate').value.trim(),
           subject=document.getElementById('bookSubject').value.trim(),
           message=document.getElementById('bookMessage').value.trim();
     if (!name||!email||!message){alert('Please fill in name, email and message.');return;}
@@ -1821,17 +2317,18 @@
       document.getElementById('bookPhoneError').style.display='block';
       document.getElementById('bookPhone').focus(); return;
     }
-    const btn=event.target; btn.textContent='Booking…'; btn.disabled=true;
+    const btn2=btn; btn2.textContent='Booking…'; btn2.disabled=true;
     try {
-      await addDoc(collection(db,'bookings'),{name,email,phone,subject,message,createdAt:serverTimestamp()});
+      await addDoc(collection(db,'bookings'),{name,email,phone,date,subject,message,createdAt:serverTimestamp()});
       document.getElementById('bookingFormWrap').style.display='none';
       document.getElementById('bookingSuccess').classList.add('active');
-    } catch(e){ alert('Error. Try again.'); btn.textContent='Book My Call →'; btn.disabled=false; }
+    } catch(e){ alert('Error. Try again.'); btn2.textContent='Book My Call →'; btn2.disabled=false; }
   };
 
-  window.submitContact = async function() {
+  window.submitContact = async function(btn) {
     // Anti-spam: honeypot check
     if (!checkHoneypot()) return;
+    if (!checkRateLimit('lastContact')) return;
     const name=document.getElementById('cName').value.trim(),
           email=document.getElementById('cEmail').value.trim(),
           phone=document.getElementById('cPhone').value.trim(),
@@ -1843,12 +2340,12 @@
       document.getElementById('phoneError').style.display='block';
       document.getElementById('cPhone').focus(); return;
     }
-    const btn=event.target; btn.textContent='Sending…'; btn.disabled=true;
+    const btn2=btn; btn2.textContent='Sending…'; btn2.disabled=true;
     try {
       await addDoc(collection(db,'contacts'),{name,email,phone,subject,message,createdAt:serverTimestamp()});
       document.getElementById('contactFormWrap').style.display='none';
       document.getElementById('contactSuccess').classList.add('active');
-    } catch(e){ alert('Error. Try again.'); btn.textContent='Send Message →'; btn.disabled=false; }
+    } catch(e){ alert('Error. Try again.'); btn2.textContent='Send Message →'; btn2.disabled=false; }
   };
 
   /* ─── LOAD SITE SETTINGS (colors + text from admin) ─── */
@@ -1882,6 +2379,9 @@
       localStorage.setItem('siteColors', JSON.stringify({
         primaryColor: s.primaryColor || null,
         accentColor:  s.accentColor  || null,
+        heroSub:      s.heroSub      || null,
+        heroTitle1:   s.heroTitle1   || null,
+        heroTitle2:   s.heroTitle2   || null,
       }));
 
       // ── BUG FIX 1: Re-enforce current theme's bg/text vars ──
@@ -2022,7 +2522,7 @@
   /* ═══════════════════════
      ACTIVE NAV HIGHLIGHT
   ═══════════════════════ */
-  const SECTIONS = ['services','projects','tariffs','booking'];
+  const SECTIONS = ['services','projects','tariffs','booking','contact'];
   const navAnchors = document.querySelectorAll('.nav-links a');
 
   function updateNav() {
@@ -2126,7 +2626,8 @@
     if(!track||!track.children.length) return;
     const total = track.children.length;
     slideIdx = (slideIdx + dir + total) % total;
-    const cardW = track.children[0].offsetWidth + 24;
+    const gap = parseFloat(getComputedStyle(track).gap) || 24;
+    const cardW = track.children[0].offsetWidth + gap;
     track.style.transform = `translateX(-${slideIdx * cardW}px)`;
   }
   window.slide = slide;
@@ -2204,7 +2705,7 @@
   /* ═══════════════════════════════════════
      PHONE VALIDATION (Algerian numbers)
   ═══════════════════════════════════════ */
-  window.validatePhone = function(input) {
+  window.validatePhone = function(input, errorId) {
     // Remove non-digit characters
     input.value = input.value.replace(/\D/g, '');
     const val = input.value;
@@ -2217,7 +2718,8 @@
       if (input.maxLength !== 9) input.maxLength = 9;
     }
     // Visual feedback
-    const err = document.getElementById('phoneError');
+    const errElId = errorId || 'phoneError';
+    const err = document.getElementById(errElId);
     const isValid = isValidPhone(val);
     if (val.length === 0) {
       input.style.borderColor = '';
@@ -2233,9 +2735,10 @@
     }
   };
 
-  window.validatePhoneBlur = function(input) {
+  window.validatePhoneBlur = function(input, errorId) {
     const val = input.value;
-    const err = document.getElementById('phoneError');
+    const errElId = errorId || 'phoneError';
+    const err = document.getElementById(errElId);
     if (val.length > 0 && !isValidPhone(val)) {
       if (err) err.style.display = 'block';
     } else {
@@ -2721,7 +3224,7 @@
       // HERO
       badge:'Available for projects',
       heroT1:'Building', heroT2:'Digital Futures', heroT3:'that ', heroT4:'Matter',
-      heroSub:'Full-stack developer & UI/UX architect crafting premium digital experiences that convert visitors into loyal clients.',
+      heroSub:'Full-stack developer & UI/UX architect crafting premium digital experiences.',
       btnProjects:'View Projects ↓', btnBook:'Book a Call ↗',
       stat1:'Idea to Website', stat2:'High Satisfaction', stat3:'Pro Experience',
       scroll:'Scroll',
@@ -2794,7 +3297,7 @@
       navTariffs:'Tarifs', navContact:'Contact', navCta:'Parlons-en',
       badge:'Disponible pour des projets',
       heroT1:'Construire', heroT2:'le Futur Digital', heroT3:'qui ', heroT4:"compte",
-      heroSub:'Développeur full-stack & architecte UI/UX créant des expériences numériques premium qui transforment les visiteurs en clients fidèles.',
+      heroSub:'Développeur full-stack & architecte UI/UX créant des expériences numériques premium.',
       btnProjects:'Voir les projets ↓', btnBook:'Réserver un appel ↗',
       stat1:"De l'idée au site", stat2:'Haute satisfaction', stat3:'Expertise pro',
       scroll:'Défiler',
@@ -2860,7 +3363,7 @@
       navTariffs:'التعريفات', navContact:'التواصل', navCta:'لنتحدث',
       badge:'متاح للمشاريع',
       heroT1:'نبني', heroT2:'مستقبلاً رقمياً', heroT3:'', heroT4:'يستحق',
-      heroSub:'مطور متكامل ومصمم واجهات يصنع تجارب رقمية مميزة تحوّل الزوار إلى عملاء مخلصين.',
+      heroSub:'مطور متكامل ومصمم واجهات يصنع تجارب رقمية مميزة.',
       btnProjects:'عرض المشاريع ↓', btnBook:'احجز مكالمة ↗',
       stat1:'من فكرة إلى موقع', stat2:'رضا عالٍ', stat3:'خبرة احترافية',
       scroll:'تمرير',
@@ -2972,23 +3475,28 @@
         const initials = (r.name||'?').split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
         const card = document.createElement('div');
         card.className = 'testimonial-card';
+        // Escape user content to prevent XSS
+        const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
         card.innerHTML = `
           <div class="stars">${stars}</div>
-          <p class="testimonial-text">${r.review||''}</p>
+          <p class="testimonial-text">${esc(r.review)}</p>
           <div class="testimonial-author">
-            <div class="author-avatar">${initials}</div>
+            <div class="author-avatar">${esc(initials)}</div>
             <div>
-              <div class="author-name">${r.name||''}</div>
-              <div class="author-role">${r.role||''}</div>
+              <div class="author-name">${esc(r.name)}</div>
+              <div class="author-role">${esc(r.role)}</div>
             </div>
           </div>`;
         track.appendChild(card)
       });
+      // Show the testimonials section now that we have data
+      document.getElementById('testimonials').classList.add('has-reviews');
       // Reveal observer re-run after dynamic content loaded
       if (window.observeReveal) window.observeReveal();
     } catch(e) { /* silent */ }
   }
-  loadReviews();
+  window.loadReviews = loadReviews;
+  // loadReviews is now called from the Firebase module once _firestoreDb is ready
 
 </script>
 </body>
