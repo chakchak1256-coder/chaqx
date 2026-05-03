@@ -1802,6 +1802,9 @@
     loadBookings();
     loadProjects();
     loadContacts();
+    // Module runs last — regular-script globals are already defined by now
+    setTimeout(function(){ typeof window.loadReviewsAdmin   === 'function' && window.loadReviewsAdmin();   }, 400);
+    setTimeout(function(){ typeof window.loadEditorSettings === 'function' && window.loadEditorSettings(); }, 700);
   };
 </script>
 
@@ -1984,7 +1987,7 @@ window.saveSocial = async function(){
   catch(e){ showToast('❌ Save failed.',true); }
 };
 
-async function loadEditorSettings(){
+window.loadEditorSettings = async function loadEditorSettings(){
   const db=window._db; if(!db) return;
   try{
     const {doc,getDoc}=await import("https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js");
@@ -2029,12 +2032,7 @@ function showToast(msg,err){
   setTimeout(()=>t.className='toast',3000);
 }
 
-// Patch _loadAll
-const __origLoadAll = window._loadAll;
-window._loadAll = function(){
-  __origLoadAll && __origLoadAll();
-  setTimeout(loadEditorSettings,700);
-};
+// _loadAll already wired in the Firebase module — no patch needed here
 setTimeout(livePreview,150);
 </script>
 
@@ -2143,7 +2141,7 @@ window.saveReview = async function() {
   btn.textContent='Save Review'; btn.disabled=false;
 };
 
-async function loadReviewsAdmin() {
+window.loadReviewsAdmin = async function loadReviewsAdmin() {
   const db=window._db; if(!db) return;
   const {collection,getDocs,doc,deleteDoc} = await import("https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js");
   const snap = await getDocs(collection(db,'reviews')).catch(()=>({forEach:()=>{},empty:true}));
@@ -2189,12 +2187,7 @@ window.openEditReview = function(id) {
   document.getElementById('reviewModal').classList.add('active');
 };
 
-// Patch _loadAll to include reviews
-const __rlOrig = window._loadAll;
-window._loadAll = function(){
-  __rlOrig && __rlOrig();
-  setTimeout(loadReviewsAdmin, 400);
-};
+// _loadAll already wired in the Firebase module — no patch needed here
 </script>
 
 <script>
